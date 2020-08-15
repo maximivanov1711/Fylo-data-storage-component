@@ -168,3 +168,37 @@ body {
 .storage-bar__min, .storage-bar__max {
   font-weight: bold;
 }
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(images/bg-desktop.png);
+  }
+
+  .flex-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .controls, .storage-info {
+    flex: 1;
+  }
+
+  .controls {
+    margin-right: 30px;
+    max-width: 380px;
+  }
+
+  .storage-info {
+    position: relative;
+  }
+
+  .storage-info__remaining-storage {
+    margin: 0;
+    
+    position: absolute;
+    top: 0;
+    right: 40px;
+    transform: translate(0, -70%);
+  }
+}
