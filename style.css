@@ -1,8 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  padding: 20px;
+
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   background: url(images/bg-mobile.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.controls {
+  padding: 30px;
+  border-radius: 10px 100px 10px 10px;
+  background:hsl(228, 56%, 26%);
+}
+
+.controls__logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.controls__buttons {
+  display: flex;
+}
+
+.control-button {
+  padding: 10px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+
+  background: hsl(229, 57%, 11%);
+}
+.control-button + .control-button {
+  margin-left: 20px;
 }
