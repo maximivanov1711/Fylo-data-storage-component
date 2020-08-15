@@ -16,37 +16,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="controls">
-    <img src="images/logo.svg" alt="logo" class="controls__logo logo">
-    <div class="controls__buttons">
-      <a href="#" class="control-button">
-        <img src="images/icon-document.svg" alt="icon" class="control-button__icon">
-      </a>
-      <a href="#" class="control-button">
-        <img src="images/icon-folder.svg" alt="icon" class="control-button__icon">
-      </a>
-      <a href="#" class="control-button">
-        <img src="images/icon-upload.svg" alt="icon" class="control-button__icon">
-      </a>
-    </div>
-  </div>
-
-  <div class="storage-info">
-    <div class="storage-info__title">You’ve used <span id="used-storage">815 GB</span> of your storage</div>
-    
-    <div class="storage-bar">
-      <div class="storage-bar__storage-indicator">
-        <div class="storage-indicator__used-storage"></div>
+<div class="container">
+  <div class="flex-wrapper">
+    <div class="controls">
+      <img src="images/logo.svg" alt="logo" class="controls__logo logo">
+      <div class="controls__buttons">
+        <a href="#" class="control-button">
+          <img src="images/icon-document.svg" alt="icon" class="control-button__icon">
+        </a>
+        <a href="#" class="control-button">
+          <img src="images/icon-folder.svg" alt="icon" class="control-button__icon">
+        </a>
+        <a href="#" class="control-button">
+          <img src="images/icon-upload.svg" alt="icon" class="control-button__icon">
+        </a>
       </div>
-
-      <div class="storage-bar__min">0 GB</div>
-      <div class="storage-bar__max">1000 GB</div>
     </div>
-
-    <div class="storage-info__remaining-storage"><span id="remaining-storage">815</span> GB LEFT</div>
+  
+    <div class="storage-info">
+      <span class="storage-info__title">You’ve used <span id="used-storage">815 GB</span> of your storage</span>
+      
+      <div class="storage-bar">
+        <div class="storage-bar__storage-indicator">
+          <div class="storage-indicator__used-storage"></div>
+        </div>
+  
+        <span class="storage-bar__min">0 GB</span>
+        <span class="storage-bar__max">1000 GB</span>
+      </div>
+  
+      <div class="storage-info__remaining-storage"><span id="remaining-storage">185</span> GB LEFT</div>
+    </div>
   </div>
-
+</div>
   <!-- You’ve used 815 GB of your storage
 
   185 GB Left

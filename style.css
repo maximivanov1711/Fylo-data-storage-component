@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
+
 
 body {
   padding: 20px;
 
   height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  color: hsl(243, 100%, 93%);
 
   background: url(images/bg-mobile.png);
   background-repeat: no-repeat;
@@ -17,15 +19,33 @@ body {
   background-size: cover;
 }
 
+.container {
+  margin: 0 auto;
+
+  height: 100%;
+  width: 100%;
+  max-width: 980px;
+
+  display: flex;
+  align-items: center;
+}
+
+.flex-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .controls {
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px 100px 10px 10px;
   background:hsl(228, 56%, 26%);
 }
 
 .controls__logo {
+  margin-bottom: 30px;
   width: 140px;
-  margin-bottom: 20px;
 }
 
 .controls__buttons {
@@ -48,4 +68,103 @@ body {
 }
 .control-button + .control-button {
   margin-left: 20px;
+}
+
+.storage-info {
+  margin-top: 15px;
+  padding: 40px;
+  padding-bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 10px;
+
+  background:hsl(228, 56%, 26%);
+}
+
+#used-storage {
+  font-weight: bold;
+}
+
+.storage-bar {
+  padding: 15px 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.storage-bar__storage-indicator {
+  padding: 3px;
+  margin-bottom: 10px;
+
+  height: 20px;
+  width: 100%;
+
+  border-radius: 10px;
+
+  background: hsl(229, 61%, 19%);
+}
+
+.storage-indicator__used-storage {
+  height: 100%;
+  width: 81.5%;
+
+  position: relative;
+
+  border-radius: 10px;
+
+  background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.storage-indicator__used-storage::after {
+  content: "";
+
+  height: 10px;
+  width: 10px;
+
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translate(0, -50%);
+
+  border-radius: 10px;
+
+  background: #fff;
+}
+
+.storage-info__remaining-storage {
+  margin-bottom: -35px;
+
+  height: 70px;
+  width: 170px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bold;
+  font-size: 14px;
+  color: hsl(229, 7%, 55%);
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#remaining-storage {
+  margin-right: 15px;
+  font-size: 30px;
+  color: #000;
+}
+
+.storage-bar__min, .storage-bar__max {
+  font-weight: bold;
 }
